@@ -8,7 +8,7 @@ It's responsive ✓
 
 ## Technologies
 
-The languajes, frameworks and libraries used:
+The languages, frameworks and libraries used:
 
 ✓ Javascript
 ✓ React.js
