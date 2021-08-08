@@ -26,7 +26,7 @@ export const SongForm = ({ handleSearch }) => {
         .max(30, "Máximo 30 carácteres.")
         .required("Requerido."),
     }),
-    onSubmit: (values, actions) => {
+    onSubmit: (values) => {
       handleSearch(values);
       formik.handleReset();
     },
