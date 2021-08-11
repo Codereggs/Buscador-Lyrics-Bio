@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {getData} from "../helpers/usingAxios";
+import { getData } from "../helpers/usingAxios";
 import { Loader } from "./Loader";
 import { SongDetails } from "./SongDetails";
 import { SongForm } from "./SongForm";
@@ -16,21 +16,20 @@ export const SongSearch = () => {
     const axiosData = async () => {
       const { artist, song } = search;
       let artistURL = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist}`;
-      let songURL = `https://api.lyrics.ovh/v1/${artist}/${song}`;
-      console.log(artistURL,songURL);
+      let songURL = `https://api.vagalume.com.br/search.php?art=${artist}&mus=${song}&apikey={5db6479fc482989a89a61ada398fa188}`;
       setLoading(true);
       const [artistRes, songRes] = await Promise.all([
         getData(artistURL),
-        getData(songURL)
+        getData(songURL),
       ]);
-      //console.log(artistRes, songRes)
+
       setBio(artistRes);
       setLyrics(songRes);
       setLoading(false);
-    }
-    
+    };
+
     axiosData();
-  }, [search])
+  }, [search]);
 
   const handleSearch = (data) => {
     /*  console.log(data); */
@@ -39,9 +38,13 @@ export const SongSearch = () => {
   return (
     <div>
       <h2>Song Search</h2>
-      {loading && <Loader />}
-      <SongForm handleSearch={handleSearch} />
-      <SongDetails search={search} lyrics={lyrics} bio={bio} />
+      <article className="grid-1-3 ">
+        <SongForm handleSearch={handleSearch} />
+        {loading && <Loader />}
+        {search && !loading && (
+          <SongDetails search={search} lyrics={lyrics} bio={bio} />
+        )}
+      </article>
     </div>
   );
 };

@@ -1,14 +1,13 @@
 import { Button, FormHelperText, TextField } from "@material-ui/core";
 import { useFormik } from "formik";
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import Icon from "@material-ui/core/Icon";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 import * as Yup from "yup";
+import { getData } from "../helpers/usingAxios";
 
 export const SongForm = ({ handleSearch }) => {
-  const artistRef = useRef();
-  const songRef = useRef();
-
   const formik = useFormik({
     initialValues: {
       song: "",
@@ -31,6 +30,7 @@ export const SongForm = ({ handleSearch }) => {
       formik.handleReset();
     },
   });
+
   return (
     <>
       <Form onSubmit={formik.handleSubmit}>
@@ -41,7 +41,6 @@ export const SongForm = ({ handleSearch }) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.artist}
-          ref={artistRef}
           error={formik.errors.artist ? true : false}
         />
         {formik.errors.artist ? (
@@ -56,7 +55,6 @@ export const SongForm = ({ handleSearch }) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.song}
-          ref={songRef}
           error={formik.errors.song ? true : false}
         />
         {formik.errors.song ? (

@@ -15,6 +15,7 @@ The languages, frameworks and libraries used:
 ✓ Formik
 ✓ Yup
 ✓ Material UI
+✓ Axios
 
 ## To start the project
 

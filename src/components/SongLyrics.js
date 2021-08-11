@@ -1,9 +1,10 @@
 import React from "react";
 
-export const SongLyrics = () => {
+export const SongLyrics = ({ title, lyrics }) => {
   return (
-    <div>
-      <h2>Letra de la canción</h2>
-    </div>
+    <section>
+      <h3>{title}</h3>
+      <blockquote style={{ whiteSpace: "pre-wrap" }}>{lyrics}</blockquote>
+    </section>
   );
 };
