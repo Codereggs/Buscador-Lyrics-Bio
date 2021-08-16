@@ -1,11 +1,12 @@
 import { Footer } from "./components/Footer";
 import { SongSearch } from "./components/SongSearch";
 import "./App.css";
+import Encabezado from "./components/Encabezado";
 
 function App() {
   return (
     <div className="App">
-      <h1>Buscador de Canciones</h1>
+      <Encabezado />
       <SongSearch />
       <Footer />
     </div>

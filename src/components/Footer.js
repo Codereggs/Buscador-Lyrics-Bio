@@ -7,8 +7,8 @@ export const Footer = () => {
       key={3}
       style={{
         backgroundColor: "black",
-        color: "white",
-        borderTop: "3px solid gray",
+        color: "var(--font-color)",
+        borderTop: "3px solid var(--third-color)",
         padding: "0.5rem",
         position: "fixed",
         bottom: 0,

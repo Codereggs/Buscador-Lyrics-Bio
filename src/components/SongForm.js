@@ -1,11 +1,9 @@
 import { Button, FormHelperText, TextField } from "@material-ui/core";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import { Form } from "react-bootstrap";
 import Icon from "@material-ui/core/Icon";
-import Autocomplete from "@material-ui/lab/Autocomplete";
 import * as Yup from "yup";
-import { getData } from "../helpers/usingAxios";
 
 export const SongForm = ({ handleSearch }) => {
   const formik = useFormik({
