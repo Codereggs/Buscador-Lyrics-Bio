@@ -36,7 +36,7 @@ export const SongSearch = () => {
     setSearch(data);
   };
   return (
-    <div>
+    <div className="songSearch">
       <h2>Song Search</h2>
       <article className="grid-1-3 ">
         <SongForm handleSearch={handleSearch} />
