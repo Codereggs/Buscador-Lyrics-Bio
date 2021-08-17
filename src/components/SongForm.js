@@ -6,6 +6,7 @@ import Icon from "@material-ui/core/Icon";
 import * as Yup from "yup";
 
 export const SongForm = ({ handleSearch }) => {
+  let style = { color: "#fff" };
   const formik = useFormik({
     initialValues: {
       song: "",
@@ -40,6 +41,7 @@ export const SongForm = ({ handleSearch }) => {
           onBlur={formik.handleBlur}
           value={formik.values.artist}
           error={formik.errors.artist ? true : false}
+          style={style}
         />
         {formik.errors.artist ? (
           <FormHelperText id="component-helper-text">

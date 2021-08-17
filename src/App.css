@@ -6,3 +6,37 @@
   flex-wrap: wrap;
   text-align: center;
 }
+
+.MuiTextField-root label {
+  color: var(--third-color);
+}
+
+label.MuiFormLabel-root.Mui-focused {
+  color: var(--fourth-color);
+}
+input.MuiInputBase-input {
+  color: var(--font-color);
+  border-bottom-color: var(--font-color);
+}
+
+p.MuiFormHelperText-root {
+  color: var(--error-color);
+}
+
+div.MuiInput-underline {
+  border-bottom-color: var(--third-color);
+}
+
+div.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom-color: var(--third-color);
+}
+
+div.MuiInput-underline::before {
+  color: var(--font-color);
+  border-bottom-color: var(--third-color);
+}
+
+div.MuiInput-underline:after {
+  color: var(--third-color);
+  border-bottom-color: var(--fourth-color);
+}
