@@ -12,6 +12,7 @@ export const SongSearch = () => {
   const [lyrics, setLyrics] = useState(null);
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const refLyrics = useRef();
   const refArtist = useRef();
 
@@ -36,12 +37,20 @@ export const SongSearch = () => {
     axiosData();
   }, [search]);
 
+  useEffect(() => {
+    if (window.innerWidth < 768) setIsMobile(true);
+  }, []);
+
   const handleSearch = (data) => {
     /*  console.log(data); */
     setSearch(data);
   };
 
-  const handleLyricsAndArtist = () => {};
+  const handleLyricsAndArtist = () => {
+    if (!search) return;
+    refLyrics.current.classList.toggle("none");
+    refArtist.current.classList.toggle("none");
+  };
   return (
     <div className="songSearch">
       <article className="grid-1-3 ">
@@ -57,15 +66,18 @@ export const SongSearch = () => {
           />
         )}
       </article>
-      <Button
-        type="submit"
-        variant="contained"
-        size="small"
-        color="none"
-        className="switch-lyrics-artist-btn"
-      >
-        <AlbumIcon />
-      </Button>
+      {isMobile ? (
+        <Button
+          type="submit"
+          variant="contained"
+          size="small"
+          color="none"
+          className="switch-lyrics-artist-btn"
+          onClick={handleLyricsAndArtist}
+        >
+          <AlbumIcon />
+        </Button>
+      ) : null}
     </div>
   );
 };

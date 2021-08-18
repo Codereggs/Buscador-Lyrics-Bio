@@ -70,7 +70,11 @@ button.MuiButton-contained:hover {
   background-color: var(--third-color);
 }
 
-@media screen and (max-width: 540px) {
+.song-artist {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
   button.switch-lyrics-artist-btn {
     position: fixed;
     right: 5px;
@@ -78,14 +82,15 @@ button.MuiButton-contained:hover {
     height: 10%;
     border-radius: 100%;
   }
+
   svg.MuiSvgIcon-root {
     padding: 0;
     margin: 0;
   }
-  .song-lyrics {
-  }
-  .song-artist {
-    visibility: none;
+  .none {
+    visibility: hidden;
     display: none;
+    opacity: 0;
+    transition: opacity 4s;
   }
 }
