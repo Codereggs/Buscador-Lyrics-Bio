@@ -1,8 +1,8 @@
 import React from "react";
 
-export const SongArtist = ({ artist }) => {
+export const SongArtist = ({ artist, refArtist }) => {
   return (
-    <section>
+    <section className="song-artist" ref={refArtist}>
       <h3>{artist.strArtist}</h3>
       <img src={artist.strArtistThumb} alt={artist.strArtist} />
       <p>Año de nacimiento: {artist.intBornYear}</p>

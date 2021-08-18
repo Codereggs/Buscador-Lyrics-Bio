@@ -71,4 +71,21 @@ button.MuiButton-contained:hover {
 }
 
 @media screen and (max-width: 540px) {
+  button.switch-lyrics-artist-btn {
+    position: fixed;
+    right: 5px;
+    bottom: 60px;
+    height: 10%;
+    border-radius: 100%;
+  }
+  svg.MuiSvgIcon-root {
+    padding: 0;
+    margin: 0;
+  }
+  .song-lyrics {
+  }
+  .song-artist {
+    visibility: none;
+    display: none;
+  }
 }

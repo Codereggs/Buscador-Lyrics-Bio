@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getData } from "../helpers/usingAxios";
 import { Loader } from "./Loader";
 import { SongDetails } from "./SongDetails";
 import { SongForm } from "./SongForm";
+import { Button } from "@material-ui/core";
+import MusicNoteIcon from "@material-ui/icons/MusicNote";
+import AlbumIcon from "@material-ui/icons/Album";
 
 export const SongSearch = () => {
   const [search, setSearch] = useState(null);
   const [lyrics, setLyrics] = useState(null);
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(false);
+  const refLyrics = useRef();
+  const refArtist = useRef();
 
   useEffect(() => {
     if (search === null) return;
@@ -35,15 +40,32 @@ export const SongSearch = () => {
     /*  console.log(data); */
     setSearch(data);
   };
+
+  const handleLyricsAndArtist = () => {};
   return (
     <div className="songSearch">
       <article className="grid-1-3 ">
-        <SongForm handleSearch={handleSearch} />
-        {loading && <Loader />}
+        {loading ? <Loader /> : <SongForm handleSearch={handleSearch} />}
+
         {search && !loading && (
-          <SongDetails search={search} lyrics={lyrics} bio={bio} />
+          <SongDetails
+            search={search}
+            lyrics={lyrics}
+            bio={bio}
+            refLyrics={refLyrics}
+            refArtist={refArtist}
+          />
         )}
       </article>
+      <Button
+        type="submit"
+        variant="contained"
+        size="small"
+        color="none"
+        className="switch-lyrics-artist-btn"
+      >
+        <AlbumIcon />
+      </Button>
     </div>
   );
 };
