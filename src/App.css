@@ -7,8 +7,16 @@
   text-align: center;
 }
 
+.form-Song {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .MuiTextField-root label {
-  color: var(--third-color);
+  color: var(--fourth-color);
 }
 
 label.MuiFormLabel-root.Mui-focused {
@@ -24,19 +32,43 @@ p.MuiFormHelperText-root {
 }
 
 div.MuiInput-underline {
-  border-bottom-color: var(--third-color);
+  border-bottom-color: var(--fourth-color);
 }
 
 div.MuiInput-underline:hover:not(.Mui-disabled):before {
-  border-bottom-color: var(--third-color);
+  border-bottom-color: var(--fourth-color);
 }
 
 div.MuiInput-underline::before {
   color: var(--font-color);
-  border-bottom-color: var(--third-color);
+  border-bottom-color: var(--fourth-color);
 }
 
 div.MuiInput-underline:after {
-  color: var(--third-color);
+  color: var(--fourth-color);
   border-bottom-color: var(--fourth-color);
+}
+button.MuiButton-root {
+  color: var(--font-color);
+}
+
+button.MuiButton-contained {
+  margin-top: 1rem;
+  color: var(--font-color);
+  background-color: var(--fourth-color);
+}
+
+button.MuiButton-contained span.MuiButton-label {
+  color: var(--primary-color);
+}
+
+button.MuiButton-contained span.MuiButton-label:hover {
+  color: var(--font-color);
+}
+
+button.MuiButton-contained:hover {
+  background-color: var(--third-color);
+}
+
+@media screen and (max-width: 540px) {
 }

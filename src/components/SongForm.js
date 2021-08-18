@@ -32,7 +32,10 @@ export const SongForm = ({ handleSearch }) => {
 
   return (
     <>
-      <Form onSubmit={formik.handleSubmit} className="form-Song Details">
+      <Form
+        onSubmit={formik.handleSubmit}
+        className="form-Song form-mobile Details"
+      >
         <TextField
           id="artist"
           label={"Nombre de Artista"}
@@ -66,7 +69,7 @@ export const SongForm = ({ handleSearch }) => {
           type="submit"
           variant="contained"
           size="small"
-          color="primary"
+          color="none"
           endIcon={<Icon>search</Icon>}
         >
           Buscar
