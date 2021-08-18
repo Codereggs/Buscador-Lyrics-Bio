@@ -13,6 +13,7 @@ export const SongSearch = () => {
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isSwitch, setIsSwitch] = useState(null);
   const refLyrics = useRef();
   const refArtist = useRef();
 
@@ -46,10 +47,13 @@ export const SongSearch = () => {
     setSearch(data);
   };
 
-  const handleLyricsAndArtist = () => {
+  const handleLyricsAndArtist = (e) => {
     if (!search) return;
     refLyrics.current.classList.toggle("none");
     refArtist.current.classList.toggle("none");
+    let swiche = refLyrics.current.classList;
+    if (swiche[1] === "none") setIsSwitch(true);
+    else setIsSwitch(null);
   };
   return (
     <div className="songSearch">
@@ -75,7 +79,7 @@ export const SongSearch = () => {
           className="switch-lyrics-artist-btn"
           onClick={handleLyricsAndArtist}
         >
-          <AlbumIcon />
+          {isSwitch ? <MusicNoteIcon /> : <AlbumIcon />}
         </Button>
       ) : null}
     </div>
