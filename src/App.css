@@ -103,10 +103,53 @@ button.MuiButton-contained:hover {
   color: var(--third-color);
 }
 
-.musical-note {
-
+.musical-notes {
+  margin: 0;
+  padding: 0;
 }
 
+.musical-note {
+  position: absolute;
+  color: var(--fourth-color);
+  bottom: 0;
+  animation: songnote 6s linear infinite;
+  left: 18%;
+  z-index: -1;
+}
+
+.musical-note:nth-child(1) {
+  animation-duration: 3s;
+  left: 36%;
+}
+.musical-note:nth-child(2) {
+  animation-duration: 6s;
+  left: 54%;
+}
+.musical-note:nth-child(3) {
+  animation-duration: 2s;
+  left: 72%;
+}
+.musical-note:nth-child(4) {
+  animation-duration: 5s;
+  left: 90%;
+}
+svg.MuiSvgIcon-root {
+  width: 3em;
+  height: 3em;
+}
+@keyframes songnote {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   button.switch-lyrics-artist-btn {
     position: fixed;
