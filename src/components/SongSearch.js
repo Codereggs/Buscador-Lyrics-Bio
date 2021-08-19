@@ -29,6 +29,12 @@ export const SongSearch = () => {
         getData(artistURL),
         getData(songURL),
       ]);
+      if (!artistRes) {
+        setBio({ artists: songRes });
+        setLyrics(songRes);
+        setLoading(false);
+        return;
+      }
 
       setBio(artistRes);
       setLyrics(songRes);
