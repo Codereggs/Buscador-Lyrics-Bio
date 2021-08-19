@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 
 .App {
   height: 100vh;
@@ -96,6 +97,7 @@ button.MuiButton-contained:hover {
   flex-direction: column;
   flex-wrap: nowrap;
   font-family: "Quicksand", sans-serif;
+  background-color: var(--primary-color);
 }
 
 .song-artist a {
@@ -181,7 +183,7 @@ svg.MuiSvgIcon-root {
   }
 
   .artist-img {
-    width: 90%;
+    width: 100%;
   }
   .music-bio {
     width: 90%;

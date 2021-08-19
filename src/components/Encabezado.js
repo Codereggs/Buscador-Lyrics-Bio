@@ -5,7 +5,7 @@ const Encabezado = () => {
     backgroundColor: "var(--second-color)",
     color: "var(--font-color)",
     borderBottom: "2px solid var(--third-color)",
-    padding: "0.5rem 0px",
+    padding: "0.2rem 0px",
     position: "sticky",
     top: 0,
     display: "flex",
@@ -13,10 +13,12 @@ const Encabezado = () => {
     zIndex: "1",
     width: "100%",
     textAlign: "center",
+    fontFamily: "'Rajdhani', sans-serif",
+    fontSize: "1.3em",
   };
   return (
     <div style={styleDiv}>
-      <h2>Song Search</h2>
+      <h2>🎼 BusCan 🎼</h2>
     </div>
   );
 };

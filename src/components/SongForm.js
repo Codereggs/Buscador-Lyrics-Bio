@@ -53,7 +53,7 @@ export const SongForm = ({ handleSearch }) => {
         ) : null}
         <TextField
           id="song"
-          label={"Buscar Canción"}
+          label={"Nombre de Canción"}
           type="text"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
