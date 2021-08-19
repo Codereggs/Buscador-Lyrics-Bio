@@ -69,7 +69,6 @@ export const SongForm = ({ handleSearch }) => {
           type="submit"
           variant="contained"
           size="small"
-          color="none"
           endIcon={<Icon>search</Icon>}
         >
           Buscar

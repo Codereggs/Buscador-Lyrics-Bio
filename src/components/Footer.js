@@ -9,12 +9,12 @@ export const Footer = () => {
         backgroundColor: "black",
         color: "var(--font-color)",
         borderTop: "3px solid var(--third-color)",
-        padding: "0.5rem",
-        position: "fixed",
-        bottom: 0,
-        display: "flex",
+        padding: "0.5rem 0px",
+        alignSelf: "flex-end",
+        justifySelf: "flex-end",
+        display: "inherit",
+
         flexDirection: "column",
-        marginTop: "2rem",
         zIndex: "2",
         width: "100%",
       }}

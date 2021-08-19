@@ -75,7 +75,6 @@ export const SongSearch = () => {
           type="submit"
           variant="contained"
           size="small"
-          color="none"
           className="switch-lyrics-artist-btn"
           onClick={handleLyricsAndArtist}
         >
