@@ -8,7 +8,7 @@ export const SongDetails = ({ search, lyrics, bio, refLyrics, refArtist }) => {
 
   return (
     <>
-      {lyrics.type === "song_notfound" ? (
+      {lyrics.type === "song_notfound" || lyrics.type === "notfound" ? (
         <Message
           msg={`Error: La canción <em> ${search.song} </em> no fue encontrada.`}
           bgColor="#f44336"
