@@ -13,7 +13,8 @@ export const Footer = () => {
         alignSelf: "flex-end",
         justifySelf: "flex-end",
         display: "inherit",
-
+        fontFamily: "Teko, sans-serif",
+        fontSize: "1.4em",
         flexDirection: "column",
         zIndex: "2",
         width: "100%",
@@ -27,7 +28,7 @@ export const Footer = () => {
           margin: "auto",
         }}
       >
-        By Codereggs
+        ©️ By Codereggs - 2021
       </p>
     </section>
   );
