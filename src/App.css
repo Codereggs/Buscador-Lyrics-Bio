@@ -23,6 +23,11 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  background-color: var(--second-color);
+  border: 1px solid var(--fourth-color);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
 }
 
 .MuiTextField-root label {
@@ -122,7 +127,7 @@ button.MuiButton-contained:hover {
   left: 36%;
 }
 .musical-note:nth-child(2) {
-  animation-duration: 6s;
+  animation-duration: 7s;
   left: 54%;
 }
 .musical-note:nth-child(3) {
@@ -160,6 +165,8 @@ svg.MuiSvgIcon-root {
   }
 
   svg.MuiSvgIcon-root {
+    width: 1em;
+    height: 1em;
     padding: 0;
     margin: 0;
   }
