@@ -15,17 +15,28 @@ export const SongArtist = ({ artist, refArtist }) => {
           style={{ cursor: "pointer", boxShadow: "0px 0px 12px 0.5px #00FFF3" }}
         />
       </a>
-      <p>Año de nacimiento/Fundación: {artist.intBornYear}</p>
-      <p>País de origen: {artist.strCountry}</p>
-      <p>
-        Género musical: {artist.strGenre} - {artist.strStyle}
-      </p>
-      <a href={artist.strWebsite} target="_blank" rel="noreferrer">
-        -Sitio web oficial-
-      </a>
-      <p className="music-bio">
-        Biografía: {artist.strBiographyES || artist.strBiographyEN}
-      </p>
+      {!artist.intBornYear ? null : (
+        <p>
+          Año de nacimiento/Fundación:{" "}
+          {artist.intBornYear || artist.intFormedYear}
+        </p>
+      )}
+      {!artist.strCountry ? null : <p>País de origen: {artist.strCountry}</p>}
+      {!artist.strGenre && !artist.strStyle ? null : (
+        <p>
+          Género musical: {artist.strGenre} - {artist.strStyle}
+        </p>
+      )}
+      {!artist.strWebsite ? null : (
+        <a href={artist.strWebsite} target="_blank" rel="noreferrer">
+          -Sitio web oficial-
+        </a>
+      )}
+      {!artist.strBiographyEN && !artist.strBiographyES ? null : (
+        <p className="music-bio">
+          Biografía: {artist.strBiographyES || artist.strBiographyEN}
+        </p>
+      )}
     </section>
   );
 };
