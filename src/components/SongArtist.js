@@ -7,7 +7,11 @@ export const SongArtist = ({ artist, refArtist }) => {
       <Typography variant="h3" component="h2" style={{ margin: "1rem" }}>
         {artist.strArtist}
       </Typography>
-      <a href={artist.strWebsite} target="_blank" rel="noreferrer">
+      <a
+        href={"https://" + artist.strWebsite}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <img
           src={artist.strArtistThumb}
           alt={artist.strArtist}
@@ -28,7 +32,11 @@ export const SongArtist = ({ artist, refArtist }) => {
         </p>
       )}
       {!artist.strWebsite ? null : (
-        <a href={artist.strWebsite} target="_blank" rel="noreferrer">
+        <a
+          href={"https://" + artist.strWebsite}
+          target="_blank"
+          rel="noreferrer"
+        >
           -Sitio web oficial-
         </a>
       )}
