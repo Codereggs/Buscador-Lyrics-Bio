@@ -28,4 +28,5 @@ The languages, frameworks and libraries used:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### There will be the link for the deployed app (Coming soon...)
+### This is the link for website deployed:
+https://buscan.vercel.app
