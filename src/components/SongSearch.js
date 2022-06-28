@@ -22,7 +22,7 @@ export const SongSearch = () => {
 
     const axiosData = async () => {
       const { artist, song } = search;
-      let artistURL = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist}`;
+      let artistURL = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist}`;
       let songURL = `https://api.vagalume.com.br/search.php?art=${artist}&mus=${song}&apikey={5db6479fc482989a89a61ada398fa188}`;
       setLoading(true);
       const [artistRes, songRes] = await Promise.all([
